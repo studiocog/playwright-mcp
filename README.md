@@ -1,9 +1,18 @@
 ## Playwright MCP
 
 > **studiocog build.** This branch runs `playwright` and `playwright-core` built from
-> [studiocog/playwright](https://github.com/studiocog/playwright) (upstream commit `f0eadb9`), attached to the
-> [v0.0.84-studiocog.1 release](https://github.com/studiocog/playwright-mcp/releases/tag/v0.0.84-studiocog.1)
-> together with the Chrome extension build.
+> [studiocog/playwright](https://github.com/studiocog/playwright/tree/studiocog) (branch `studiocog`, on upstream
+> commit `f0eadb9`), attached to the
+> [v0.0.84-studiocog.2 release](https://github.com/studiocog/playwright-mcp/releases/tag/v0.0.84-studiocog.2)
+> together with the Chrome extension build. It adds these tools to the core set:
+>
+> - `browser_batch`: run several tool calls in one call
+> - `browser_get_text`: readable text of the page's main region
+> - `browser_zoom`: high-resolution screenshot of a viewport region
+> - `browser_shortcut_save`, `browser_shortcut_list`, `browser_shortcut_run`, `browser_shortcut_delete`: saved,
+>   reusable action sequences, kept in `~/.playwright-mcp/shortcuts.json` (or `PLAYWRIGHT_MCP_SHORTCUTS_FILE`)
+>
+> Setup:
 >
 > 1. Download `playwright-extension-studiocog.zip` from the release, unzip it, open `chrome://extensions`, turn on
 >    Developer mode, and click **Load unpacked** on the folder. Remove the Web Store "Playwright Extension" first:
