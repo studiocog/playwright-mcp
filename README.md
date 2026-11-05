@@ -17,8 +17,11 @@
 > 1. Download `playwright-extension-studiocog.zip` from the release, unzip it, open `chrome://extensions`, turn on
 >    Developer mode, and click **Load unpacked** on the folder. Remove the Web Store "Playwright Extension" first:
 >    both use the same extension ID.
-> 2. Add the server to Claude Code:
->    `claude mcp add playwright-studiocog -- npx -y git+https://github.com/studiocog/playwright-mcp.git#studiocog --extension`
+> 2. Install the server, and run the same command again to update it. Install from the branch tarball, not a
+>    `git+https://` URL: on Windows, npm installs a git URL globally as a link to a temporary folder it then deletes.
+>    `npm install -g https://github.com/studiocog/playwright-mcp/archive/refs/heads/studiocog.tar.gz`
+> 3. Add it to Claude Code for all projects, with the path to the installed `cli.js` (`npm root -g` prints the folder):
+>    `claude mcp add playwright-studiocog -s user -- node "<npm root -g>/@playwright/mcp/cli.js" --extension`
 
 A Model Context Protocol (MCP) server that provides browser automation capabilities using [Playwright](https://playwright.dev). This server enables LLMs to interact with web pages through structured accessibility snapshots, bypassing the need for screenshots or visually-tuned models.
 
