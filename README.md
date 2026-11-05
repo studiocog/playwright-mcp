@@ -1,5 +1,16 @@
 ## Playwright MCP
 
+> **studiocog build.** This branch runs `playwright` and `playwright-core` built from
+> [studiocog/playwright](https://github.com/studiocog/playwright) (upstream commit `f0eadb9`), attached to the
+> [v0.0.84-studiocog.1 release](https://github.com/studiocog/playwright-mcp/releases/tag/v0.0.84-studiocog.1)
+> together with the Chrome extension build.
+>
+> 1. Download `playwright-extension-studiocog.zip` from the release, unzip it, open `chrome://extensions`, turn on
+>    Developer mode, and click **Load unpacked** on the folder. Remove the Web Store "Playwright Extension" first:
+>    both use the same extension ID.
+> 2. Add the server to Claude Code:
+>    `claude mcp add playwright-studiocog -- npx -y github:studiocog/playwright-mcp#studiocog --extension`
+
 A Model Context Protocol (MCP) server that provides browser automation capabilities using [Playwright](https://playwright.dev). This server enables LLMs to interact with web pages through structured accessibility snapshots, bypassing the need for screenshots or visually-tuned models.
 
 ### Playwright MCP vs Playwright CLI
