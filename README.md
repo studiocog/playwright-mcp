@@ -9,7 +9,7 @@
 >    Developer mode, and click **Load unpacked** on the folder. Remove the Web Store "Playwright Extension" first:
 >    both use the same extension ID.
 > 2. Add the server to Claude Code:
->    `claude mcp add playwright-studiocog -- npx -y github:studiocog/playwright-mcp#studiocog --extension`
+>    `claude mcp add playwright-studiocog -- npx -y git+https://github.com/studiocog/playwright-mcp.git#studiocog --extension`
 
 A Model Context Protocol (MCP) server that provides browser automation capabilities using [Playwright](https://playwright.dev). This server enables LLMs to interact with web pages through structured accessibility snapshots, bypassing the need for screenshots or visually-tuned models.
 
