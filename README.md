@@ -3,7 +3,7 @@
 > **studiocog build.** This branch runs `playwright` and `playwright-core` built from
 > [studiocog/playwright](https://github.com/studiocog/playwright/tree/studiocog) (branch `studiocog`, on upstream
 > commit `f0eadb9`), attached to the
-> [v0.0.84-studiocog.2 release](https://github.com/studiocog/playwright-mcp/releases/tag/v0.0.84-studiocog.2)
+> [v0.0.84-studiocog.3 release](https://github.com/studiocog/playwright-mcp/releases/tag/v0.0.84-studiocog.3)
 > together with the Chrome extension build. It adds these tools to the core set:
 >
 > - `browser_batch`: run several tool calls in one call
@@ -11,6 +11,10 @@
 > - `browser_zoom`: high-resolution screenshot of a viewport region
 > - `browser_shortcut_save`, `browser_shortcut_list`, `browser_shortcut_run`, `browser_shortcut_delete`: saved,
 >   reusable action sequences, kept in `~/.playwright-mcp/shortcuts.json` (or `PLAYWRIGHT_MCP_SHORTCUTS_FILE`)
+> - `browser_paste_image`: paste or drop an image file into a page
+> - `browser_start_gif`, `browser_stop_gif`: record what happens in the tab as an animated GIF
+> - `browser_list_browsers`, `browser_switch_browser`: list the Chrome and Edge profiles that have the extension and
+>   switch the connection between them (`--extension` only)
 >
 > Setup:
 >
