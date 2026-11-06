@@ -37,8 +37,8 @@
     }
   },
   "dependencies": {
-    "playwright": "https://github.com/studiocog/playwright-mcp/releases/download/v0.0.84-studiocog.3/playwright-1.66.0-next.tgz",
-    "playwright-core": "https://github.com/studiocog/playwright-mcp/releases/download/v0.0.84-studiocog.3/playwright-core-1.66.0-next.tgz"
+    "playwright": "https://github.com/studiocog/playwright-mcp/releases/download/v0.0.84-studiocog.4/playwright-1.66.0-next.tgz",
+    "playwright-core": "https://github.com/studiocog/playwright-mcp/releases/download/v0.0.84-studiocog.4/playwright-core-1.66.0-next.tgz"
   },
   "devDependencies": {
     "@modelcontextprotocol/sdk": "^1.25.2",

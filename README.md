@@ -3,14 +3,22 @@
 > **studiocog build.** This branch runs `playwright` and `playwright-core` built from
 > [studiocog/playwright](https://github.com/studiocog/playwright/tree/studiocog) (branch `studiocog`, on upstream
 > commit `f0eadb9`), attached to the
-> [v0.0.84-studiocog.3 release](https://github.com/studiocog/playwright-mcp/releases/tag/v0.0.84-studiocog.3)
+> [v0.0.84-studiocog.4 release](https://github.com/studiocog/playwright-mcp/releases/tag/v0.0.84-studiocog.4)
 > together with the Chrome extension build. It adds these tools to the core set:
 >
 > - `browser_batch`: run several tool calls in one call
 > - `browser_get_text`: readable text of the page's main region
 > - `browser_zoom`: high-resolution screenshot of a viewport region
 > - `browser_shortcut_save`, `browser_shortcut_list`, `browser_shortcut_run`, `browser_shortcut_delete`: saved,
->   reusable action sequences, kept in `~/.playwright-mcp/shortcuts.json` (or `PLAYWRIGHT_MCP_SHORTCUTS_FILE`)
+>   reusable action sequences, kept in `~/.playwright-mcp/shortcuts.json` (or `PLAYWRIGHT_MCP_SHORTCUTS_FILE`).
+>   A shortcut can use `{{name}}` variables, filled in with `browser_shortcut_run`'s `variables`
+> - `browser_shortcut_record_start`, `browser_shortcut_record_stop`: record what you do by hand and save it as a
+>   shortcut, turning typed text into variables
+> - `browser_snapshot_compact`: only the interactive elements with their refs, or only what changed since the last call
+> - `browser_extract`: tables or repeated items (cards, results) to JSON or CSV
+> - Approval gates: with `PLAYWRIGHT_MCP_APPROVAL_GATES=1`, clicks and Enter that send, post, buy or delete wait until
+>   you click Allow in the page (`PLAYWRIGHT_MCP_APPROVAL_PATTERN`, `PLAYWRIGHT_MCP_APPROVAL_TIMEOUT_MS`);
+>   `browser_approval_status` shows the settings
 > - `browser_paste_image`: paste or drop an image file into a page
 > - `browser_start_gif`, `browser_stop_gif`: record what happens in the tab as an animated GIF
 > - `browser_list_browsers`, `browser_switch_browser`: list the Chrome and Edge profiles that have the extension and
